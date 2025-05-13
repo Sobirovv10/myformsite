@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="uz">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Live Sport Translatsiyalari</title>
+        <link rel="stylesheet" href="styles/main.css">
+        <link rel="stylesheet" href="styles/live.css">
+        <link rel="stylesheet" href="styles/filters.css">
+        <link rel="icon" type="image/png" href="—Pngtree—letter s logo png vector_6616257.png">
+        <!-- Font Awesome -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+        <style>
+            .highlight-score {
+                color: #ff4500;
+            }
+            .goal-animation {
+                position: absolute;
+                font-size: 5rem;
+                color: #ff4500;
+                animation: goalAnim 2s forwards;
+                z-index: 10;
+                opacity: 0;
+            }
+            @keyframes goalAnim {
+                0% { transform: scale(0.5); opacity: 0; }
+                50% { transform: scale(1.5); opacity: 1; }
+                100% { transform: scale(1); opacity: 0; }
+            }
+            .news-ticker {
+                background: #253545;
+                padding: 12px;
+                border-radius: 8px;
+                margin-bottom: 20px;
+                position: relative;
+                overflow: hidden;
+            }
+            .ticker-content {
+                white-space: nowrap;
+                animation: tickerMove 30s linear infinite;
+            }
+            @keyframes tickerMove {
+                0% { transform: translateX(100%); }
+                100% { transform: translateX(-100%); }
+            }
+            .match-card {
+                position: relative;
+            }
+            .match-stats-btn {
+                position: absolute;
+                bottom: 10px;
+                left: 50%;
+                transform: translateX(-50%);
+                background: rgba(255,69,0,0.2);
+                color: white;
+                border: none;
+                padding: 5px 12px;
+                border-radius: 15px;
+                cursor: pointer;
+                font-size: 0.8rem;
+                transition: all 0.3s;
+            }
+            .match-stats-btn:hover {
+                background: rgba(255,69,0,0.5);
+            }
+        </style>
+    </head>
+    <body>
+        <!-- Header -->
+        <header class="main-header">
+            <div class="container header-content">
+                <div class="header-left">
+                    <img src="logo_dark.png" alt="Sport Yangiliklari" class="site-logo">
+                    <h1 class="site-title">LIVE SPORT O'YINLARI</h1>
+                </div>
+                <nav class="main-nav">
+                    <a href="index.html" class="nav-link">Sport Yangiliklari</a>
+                    <a href="Live.html" class="nav-link active">Live</a>
+                    <a href="Fotball.html" class="nav-link">Futbol</a>
+                    <a href="boxing.html" class="nav-link">Boks</a>
+                    <a href="cybersport.html" class="nav-link">Kibersport UZ</a>
+                    <a href="chess.html" class="nav-link">Shaxmat</a>
+                </nav>
+                <div class="auth-buttons">
+                    <a href="forma.html" class="btn btn-light">Kirish</a>
+                </div>
+            </div>
+        </header>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <div class="container">
+                <!-- Live News Ticker -->
+                <div class="news-ticker">
+                    <div class="ticker-content">
+                        🔥 Real Madrid 2-1 Barcelona • Manchester City 0-0 Liverpool • Lakers 98-89 Warriors • Djokovic vs Alcaraz davom etmoqda
+                    </div>
+                </div>
+
+            
+                <div class="match-filters">
+                    <button class="filter-btn active" data-filter="all">
+                        <i class="fas fa-globe"></i> Barcha o'yinlar
+                    </button>
+                    <button class="filter-btn" data-filter="football">
+                        <i class="fas fa-futbol"></i> Futbol
+                    </button>
+                    <button class="filter-btn" data-filter="basketball">
+                        <i class="fas fa-basketball-ball"></i> Basketbol
+                    </button>
+                    <button class="filter-btn" data-filter="tennis">
+                        <i class="fas fa-table-tennis"></i> Tennis
+                    </button>
+                </div>
+
+              
+                <div class="live-matches-grid">
+              
+                    <div class="match-card" data-type="football">
+                        <div class="match-header">
+                            <span class="league-name">La Liga</span>
+                            <span class="live-badge">LIVE</span>
+                        </div>
+                        <div class="match-content">
+                            <div class="team-info">
+                                <img src="unnamed.png" alt="Real Madrid" class="team-logo">
+                                <span class="team-name">Real Madrid</span>
+                            </div>
+                            <div class="match-score">
+                                <span class="score">2:1</span>
+                                <span class="match-time">45'</span>
+                            </div>
+                            <div class="team-info">
+                                <img src="FC_Barcelona_(crest).svg.png" alt="Barcelona" class="team-logo">
+                                <span class="team-name">Barcelona</span>
+                            </div>
+                        </div>
+                        <div class="match-stats">
+                            <div class="stat-row">
+                                <span>Vinicius Jr. 15'</span>
+                                <span>Benzema 37'</span>
+                                <span>Lewandowski 42'</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="match-card" data-type="football">
+                        <div class="match-header">
+                            <span class="league-name">Premier League</span>
+                            <span class="live-badge">LIVE</span>
+                        </div>
+                        <div class="match-content">
+                            <div class="team-info">
+                                <img src="images (1).png" alt="Manchester City" class="team-logo">
+                                <span class="team-name">Manchester City</span>
+                            </div>
+                            <div class="match-score">
+                                <span class="score">0:0</span>
+                                <span class="match-time">30'</span>
+                            </div>
+                            <div class="team-info">
+                                <img src="images.jpg" alt="Liverpool" class="team-logo">
+                                <span class="team-name">Liverpool</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="match-card" data-type="basketball">
+                        <div class="match-header">
+                            <span class="league-name">NBA</span>
+                            <span class="live-badge">LIVE</span>
+                        </div>
+                        <div class="match-content">
+                            <div class="team-info">
+                                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7c/Los_Angeles_Lakers_logo.svg/1200px-Los_Angeles_Lakers_logo.svg.png" alt="Lakers" class="team-logo">
+                                <span class="team-name">LA Lakers</span>
+                            </div>
+                            <div class="match-score">
+                                <span class="score">98:89</span>
+                                <span class="match-time">3-chorak</span>
+                            </div>
+                            <div class="team-info">
+                                <img src="https://upload.wikimedia.org/wikipedia/en/thumb/0/01/Golden_State_Warriors_logo.svg/1200px-Golden_State_Warriors_logo.svg.png" alt="Warriors" class="team-logo">
+                                <span class="team-name">Golden State</span>
+                            </div>
+                        </div>
+                        <div class="match-stats">
+                            <div class="stat-row">
+                                <span>LeBron James: 28 pts</span>
+                                <span>Stephen Curry: 25 pts</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="match-card" data-type="basketball">
+                        <div class="match-header">
+                            <span class="league-name">NBA</span>
+                            <span class="live-badge">LIVE</span>
+                        </div>
+                        <div class="match-content">
+                            <div class="team-info">
+                                <img src="https://upload.wikimedia.org/wikipedia/en/thumb/8/8f/Boston_Celtics.svg/1200px-Boston_Celtics.svg.png" alt="Celtics" class="team-logo">
+                                <span class="team-name">Boston Celtics</span>
+                            </div>
+                            <div class="match-score">
+                                <span class="score">85:82</span>
+                                <span class="match-time">4-chorak</span>
+                            </div>
+                            <div class="team-info">
+                                <img src="https://upload.wikimedia.org/wikipedia/en/thumb/f/fb/Miami_Heat_logo.svg/1200px-Miami_Heat_logo.svg.png" alt="Heat" class="team-logo">
+                                <span class="team-name">Miami Heat</span>
+                            </div>
+                        </div>
+                    </div>
+
+             
+                    <div class="match-card" data-type="tennis">
+                        <div class="match-header">
+                            <span class="league-name">ATP 1000</span>
+                            <span class="live-badge">LIVE</span>
+                        </div>
+                        <div class="match-content">
+                            <div class="tennis-score">
+                                <div class="player">
+                                    <span class="player-name">N. Djokovic</span>
+                                    <div class="sets">
+                                        <span>6</span>
+                                        <span>7</span>
+                                        <span class="current-set">3</span>
+                                    </div>
+                                </div>
+                                <div class="player">
+                                    <span class="player-name">C. Alcaraz</span>
+                                    <div class="sets">
+                                        <span>3</span>
+                                        <span>6</span>
+                                        <span class="current-set">2</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="match-card" data-type="tennis">
+                        <div class="match-header">
+                            <span class="league-name">WTA 1000</span>
+                            <span class="live-badge">LIVE</span>
+                        </div>
+                        <div class="match-content">
+                            <div class="tennis-score">
+                                <div class="player">
+                                    <span class="player-name">I. Swiatek</span>
+                                    <div class="sets">
+                                        <span>6</span>
+                                        <span class="current-set">4</span>
+                                    </div>
+                                </div>
+                                <div class="player">
+                                    <span class="player-name">A. Sabalenka</span>
+                                    <div class="sets">
+                                        <span>4</span>
+                                        <span class="current-set">3</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Latest News Section -->
+                <div class="latest-news">
+                    <h2 class="section-title">So'nggi Yangiliklar</h2>
+                    <div class="news-grid">
+                        <div class="news-card" data-type="football">
+                            <div class="news-image">
+                                <img src="unnamed.png" alt="Real Madrid">
+                            </div>
+                            <div class="news-content">
+                                <h3>Real Madrid La Liga chempioni bo'ldi</h3>
+                                <p>Real Madrid Barcelona ustidan g'alaba qozonib, La Liga chempionligini qo'lga kiritdi...</p>
+                                <div class="news-meta">
+                                    <span><i class="far fa-clock"></i> 1 soat oldin</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="news-card" data-type="basketball">
+                            <div class="news-image">
+                                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7c/Los_Angeles_Lakers_logo.svg/1200px-Los_Angeles_Lakers_logo.svg.png" alt="Lakers">
+                            </div>
+                            <div class="news-content">
+                                <h3>LeBron James NBA tarixida yangi rekord o'rnatdi</h3>
+                                <p>LeBron James NBA tarixidagi eng ko'p ochko to'plagan o'yinchi bo'ldi...</p>
+                                <div class="news-meta">
+                                    <span><i class="far fa-clock"></i> 2 soat oldin</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="news-card" data-type="tennis">
+                            <div class="news-image">
+                                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/48/Novak_Djokovic_%28cropped%29.jpg/1200px-Novak_Djokovic_%28cropped%29.jpg" alt="Djokovic">
+                            </div>
+                            <div class="news-content">
+                                <h3>Djokovic Grand Slam rekordini yangiladi</h3>
+                                <p>Novak Djokovic 24-Grand Slam chempionligini qo'lga kiritdi...</p>
+                                <div class="news-meta">
+                                    <span><i class="far fa-clock"></i> 3 soat oldin</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <!-- Footer -->
+        <footer class="main-footer">
+            <div class="container">
+                <div class="footer-content">
+                    <div class="footer-section">
+                        <h3>Sport Yangiliklari</h3>
+                        <p>O'zbekistonning eng yangi sport yangiliklari va live natijalar portali</p>
+                    </div>
+                    <div class="footer-section">
+                        <h3>Ijtimoiy Tarmoqlar</h3>
+                        <div class="social-links">
+                            <a href="https://t.me/SportUzNet" class="social-link">
+                                <i class="fab fa-telegram"></i> SPORTx
+                            </a>
+                        </div>
+                    </div>
+                    <div class="footer-section">
+                        <h3>Aloqa</h3>
+                        <p><i class="fas fa-envelope"></i> info@sportyangiliklari.uz</p>
+                        <p><i class="fas fa-phone"></i> +998 90 123 45 67</p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+        <!-- Scripts -->
+        <script src="js/filters.js"></script>
+        <script src="js/live-scores.js"></script>
+    </body>
+</html>

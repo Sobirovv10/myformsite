@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>F(x) va f(x) grafiklari</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <h2>Taqsimot funksiyasi F(x)</h2>
+    <canvas id="FxChart"></canvas>
+    
+    <h2>Zichlik funksiyasi f(x)</h2>
+    <canvas id="fxChart"></canvas>
+    
+    <script>
+        function F(x) {
+            if (x <= -Math.PI/2) return 0;
+            else if (x > -Math.PI/2 && x <= 0) return Math.cos(2*x);
+            else return 1;
+        }
+
+        function f(x) {
+            if (x > -Math.PI/2 && x <= 0) return -2 * Math.sin(2*x);
+            return 0;
+        }
+
+        let xValues = [];
+        let FValues = [];
+        let fValues = [];
+        for (let x = -2; x <= 1; x += 0.05) {
+            xValues.push(x);
+            FValues.push(F(x));
+            fValues.push(f(x));
+        }
+
+        const ctx1 = document.getElementById('FxChart').getContext('2d');
+        new Chart(ctx1, {
+            type: 'line',
+            data: {
+                labels: xValues,
+                datasets: [{
+                    label: 'F(x)',
+                    data: FValues,
+                    borderColor: 'blue',
+                    fill: false
+                }]
+            },
+            options: { responsive: true }
+        });
+
+        const ctx2 = document.getElementById('fxChart').getContext('2d');
+        new Chart(ctx2, {
+            type: 'line',
+            data: {
+                labels: xValues,
+                datasets: [{
+                    label: 'f(x)',
+                    data: fValues,
+                    borderColor: 'red',
+                    fill: false
+                }]
+            },
+            options: { responsive: true }
+        });
+    </script>
+</body>
+</html>

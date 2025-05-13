@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="uz">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Futbol Yangiliklari</title>
+        <link rel="stylesheet" href="styles/main.css">
+        <link rel="stylesheet" href="styles/football.css">
+        <link rel="stylesheet" href="styles/filters.css">
+        <link rel="icon" type="image/png" href="—Pngtree—letter s logo png vector_6616257.png">
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    </head>
+    <body>
+        
+        <header class="main-header">
+            <div class="container header-content">
+                <div class="header-left">
+                    <img src="logo_dark.png" alt="Sport Yangiliklari" class="site-logo">
+                    <h1 class="site-title">Futbol Yangiliklari</h1>
+                </div>
+                <nav class="main-nav">
+                    <a href="index.html" class="nav-link">Sport Yangiliklari</a>
+                    <a href="Live.html" class="nav-link">Live</a>
+                    <a href="Fotball.html" class="nav-link active">Futbol</a>
+                    <a href="boxing.html" class="nav-link">Boks</a>
+                    <a href="cybersport.html" class="nav-link">Kibersport UZ</a>
+                    <a href="chess.html" class="nav-link">Shaxmat</a>
+                </nav>
+                <div class="auth-buttons">
+                    <a href="forma.html" class="btn btn-light">Kirish</a>
+                </div>
+            </div>
+        </header>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <div class="container">
+                <!-- League Navigation -->
+                <div class="league-navigation">
+                    <button class="league-btn active" data-league="laliga">
+                        <img src="unnamed.png" alt="La Liga">
+                        <span>La Liga</span>
+                    </button>
+                    <button class="league-btn" data-league="premier">
+                        <img src="images (1).png" alt="Premier League">
+                        <span>Premier League</span>
+                    </button>
+                    <button class="league-btn" data-league="bundesliga">
+                        <img src="https://upload.wikimedia.org/wikipedia/en/thumb/d/df/Bundesliga_logo_%282017%29.svg/1200px-Bundesliga_logo_%282017%29.svg.png" alt="Bundesliga">
+                        <span>Bundesliga</span>
+                    </button>
+                    <button class="league-btn" data-league="seriea">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4f/Serie_A_logo_%282019%29.svg/1200px-Serie_A_logo_%282019%29.svg.png" alt="Serie A">
+                        <span>Serie A</span>
+                    </button>
+                </div>
+
+                <!-- La Liga Content -->
+                <div class="football-content" data-league="laliga">
+                    <!-- Featured Match -->
+                    <section class="featured-match">
+                        <div class="match-card featured">
+                            <div class="match-header">
+                                <span class="league-name">La Liga</span>
+                                <span class="match-date">Super Clasico</span>
+                            </div>
+                            <div class="match-content">
+                                <div class="team-info">
+                                    <img src="unnamed.png" alt="Real Madrid" class="team-logo">
+                                    <span class="team-name">Real Madrid</span>
+                                </div>
+                                <div class="match-details">
+                                    <div class="match-time">21:00</div>
+                                    <div class="match-date">12 May</div>
+                                    <div class="stadium">Santiago Bernabeu</div>
+                                </div>
+                                <div class="team-info">
+                                    <img src="FC_Barcelona_(crest).svg.png" alt="Barcelona" class="team-logo">
+                                    <span class="team-name">Barcelona</span>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- League Table -->
+                    <section class="league-table">
+                        <h2 class="section-title">La Liga Turnir Jadvali</h2>
+                        <div class="table-container">
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>#</th>
+                                        <th>Jamoa</th>
+                                        <th>O'</th>
+                                        <th>G'</th>
+                                        <th>D</th>
+                                        <th>M</th>
+                                        <th>TF</th>
+                                        <th>Ochko</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr class="champions-league">
+                                        <td>1</td>
+                                        <td>
+                                            <div class="team-cell">
+                                                <img src="unnamed.png" alt="Real Madrid">
+                                                <span>Real Madrid</span>
+                                            </div>
+                                        </td>
+                                        <td>32</td>
+                                        <td>24</td>
+                                        <td>6</td>
+                                        <td>2</td>
+                                        <td>+48</td>
+                                        <td>78</td>
+                                    </tr>
+                                    <tr class="champions-league">
+                                        <td>2</td>
+                                        <td>
+                                            <div class="team-cell">
+                                                <img src="FC_Barcelona_(crest).svg.png" alt="Barcelona">
+                                                <span>Barcelona</span>
+                                            </div>
+                                        </td>
+                                        <td>32</td>
+                                        <td>22</td>
+                                        <td>5</td>
+                                        <td>5</td>
+                                        <td>+42</td>
+                                        <td>71</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </section>
+                </div>
+
+                <!-- Premier League Content -->
+                <div class="football-content" data-league="premier">
+                    <!-- Featured Match -->
+                    <section class="featured-match">
+                        <div class="match-card featured">
+                            <div class="match-header">
+                                <span class="league-name">Premier League</span>
+                                <span class="match-date">Manchester Derby</span>
+                            </div>
+                            <div class="match-content">
+                                <div class="team-info">
+                                    <img src="images (1).png" alt="Manchester City" class="team-logo">
+                                    <span class="team-name">Manchester City</span>
+                                </div>
+                                <div class="match-details">
+                                    <div class="match-time">20:00</div>
+                                    <div class="match-date">15 May</div>
+                                    <div class="stadium">Etihad Stadium</div>
+                                </div>
+                                <div class="team-info">
+                                    <img src="images.jpg" alt="Manchester United" class="team-logo">
+                                    <span class="team-name">Manchester United</span>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- League Table -->
+                    <section class="league-table">
+                        <h2 class="section-title">Premier League Turnir Jadvali</h2>
+                        <div class="table-container">
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>#</th>
+                                        <th>Jamoa</th>
+                                        <th>O'</th>
+                                        <th>G'</th>
+                                        <th>D</th>
+                                        <th>M</th>
+                                        <th>TF</th>
+                                        <th>Ochko</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr class="champions-league">
+                                        <td>1</td>
+                                        <td>
+                                            <div class="team-cell">
+                                                <img src="images (1).png" alt="Manchester City">
+                                                <span>Manchester City</span>
+                                            </div>
+                                        </td>
+                                        <td>34</td>
+                                        <td>26</td>
+                                        <td>5</td>
+                                        <td>3</td>
+                                        <td>+52</td>
+                                        <td>83</td>
+                                    </tr>
+                                    <tr class="champions-league">
+                                        <td>2</td>
+                                        <td>
+                                            <div class="team-cell">
+                                                <img src="images.jpg" alt="Liverpool">
+                                                <span>Liverpool</span>
+                                            </div>
+                                        </td>
+                                        <td>34</td>
+                                        <td>24</td>
+                                        <td>7</td>
+                                        <td>3</td>
+                                        <td>+45</td>
+                                        <td>79</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </section>
+                </div>
+
+                <!-- Bundesliga Content -->
+                <div class="football-content" data-league="bundesliga">
+                    <!-- Featured Match -->
+                    <section class="featured-match">
+                        <div class="match-card featured">
+                            <div class="match-header">
+                                <span class="league-name">Bundesliga</span>
+                                <span class="match-date">Der Klassiker</span>
+                            </div>
+                            <div class="match-content">
+                                <div class="team-info">
+                                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/FC_Bayern_M%C3%BCnchen_logo_%282017%29.svg/1200px-FC_Bayern_M%C3%BCnchen_logo_%282017%29.svg.png" alt="Bayern Munich" class="team-logo">
+                                    <span class="team-name">Bayern Munich</span>
+                                </div>
+                                <div class="match-details">
+                                    <div class="match-time">19:30</div>
+                                    <div class="match-date">18 May</div>
+                                    <div class="stadium">Allianz Arena</div>
+                                </div>
+                                <div class="team-info">
+                                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/67/Borussia_Dortmund_logo.svg/1200px-Borussia_Dortmund_logo.svg.png" alt="Borussia Dortmund" class="team-logo">
+                                    <span class="team-name">Borussia Dortmund</span>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- League Table -->
+                    <section class="league-table">
+                        <h2 class="section-title">Bundesliga Turnir Jadvali</h2>
+                        <div class="table-container">
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>#</th>
+                                        <th>Jamoa</th>
+                                        <th>O'</th>
+                                        <th>G'</th>
+                                        <th>D</th>
+                                        <th>M</th>
+                                        <th>TF</th>
+                                        <th>Ochko</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr class="champions-league">
+                                        <td>1</td>
+                                        <td>
+                                            <div class="team-cell">
+                                                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/FC_Bayern_M%C3%BCnchen_logo_%282017%29.svg/1200px-FC_Bayern_M%C3%BCnchen_logo_%282017%29.svg.png" alt="Bayern Munich">
+                                                <span>Bayern Munich</span>
+                                            </div>
+                                        </td>
+                                        <td>30</td>
+                                        <td>22</td>
+                                        <td>4</td>
+                                        <td>4</td>
+                                        <td>+46</td>
+                                        <td>70</td>
+                                    </tr>
+                                    <tr class="champions-league">
+                                        <td>2</td>
+                                        <td>
+                                            <div class="team-cell">
+                                                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/67/Borussia_Dortmund_logo.svg/1200px-Borussia_Dortmund_logo.svg.png" alt="Borussia Dortmund">
+                                                <span>Borussia Dortmund</span>
+                                            </div>
+                                        </td>
+                                        <td>30</td>
+                                        <td>20</td>
+                                        <td>6</td>
+                                        <td>4</td>
+                                        <td>+38</td>
+                                        <td>66</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </section>
+                </div>
+
+                <!-- Serie A Content -->
+                <div class="football-content" data-league="seriea">
+                    <!-- Featured Match -->
+                    <section class="featured-match">
+                        <div class="match-card featured">
+                            <div class="match-header">
+                                <span class="league-name">Serie A</span>
+                                <span class="match-date">Derby della Madonnina</span>
+                            </div>
+                            <div class="match-content">
+                                <div class="team-info">
+                                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/FC_Internazionale_Milano_2021.svg/1200px-FC_Internazionale_Milano_2021.svg.png" alt="Inter Milan" class="team-logo">
+                                    <span class="team-name">Inter Milan</span>
+                                </div>
+                                <div class="match-details">
+                                    <div class="match-time">20:45</div>
+                                    <div class="match-date">20 May</div>
+                                    <div class="stadium">San Siro</div>
+                                </div>
+                                <div class="team-info">
+                                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d0/AC_Milan_logo.svg/1200px-AC_Milan_logo.svg.png" alt="AC Milan" class="team-logo">
+                                    <span class="team-name">AC Milan</span>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- League Table -->
+                    <section class="league-table">
+                        <h2 class="section-title">Serie A Turnir Jadvali</h2>
+                        <div class="table-container">
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>#</th>
+                                        <th>Jamoa</th>
+                                        <th>O'</th>
+                                        <th>G'</th>
+                                        <th>D</th>
+                                        <th>M</th>
+                                        <th>TF</th>
+                                        <th>Ochko</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr class="champions-league">
+                                        <td>1</td>
+                                        <td>
+                                            <div class="team-cell">
+                                                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/FC_Internazionale_Milano_2021.svg/1200px-FC_Internazionale_Milano_2021.svg.png" alt="Inter Milan">
+                                                <span>Inter Milan</span>
+                                            </div>
+                                        </td>
+                                        <td>33</td>
+                                        <td>27</td>
+                                        <td>5</td>
+                                        <td>1</td>
+                                        <td>+51</td>
+                                        <td>86</td>
+                                    </tr>
+                                    <tr class="champions-league">
+                                        <td>2</td>
+                                        <td>
+                                            <div class="team-cell">
+                                                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d0/AC_Milan_logo.svg/1200px-AC_Milan_logo.svg.png" alt="AC Milan">
+                                                <span>AC Milan</span>
+                                            </div>
+                                        </td>
+                                        <td>33</td>
+                                        <td>21</td>
+                                        <td>6</td>
+                                        <td>6</td>
+                                        <td>+35</td>
+                                        <td>69</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </main>
+
+        <!-- Footer -->
+        <footer class="main-footer">
+            <div class="container">
+                <div class="footer-content">
+                    <div class="footer-section">
+                        <h3>Sport Yangiliklari</h3>
+                        <p>O'zbekistonning eng yangi sport yangiliklari va live natijalar portali</p>
+                    </div>
+                    <div class="footer-section">
+                        <h3>Ijtimoiy Tarmoqlar</h3>
+                        <div class="social-links">
+                            <a href="https://t.me/SportUzNet" class="social-link">
+                                <i class="fab fa-telegram"></i> SPORTx
+                            </a>
+                        </div>
+                    </div>
+                    <div class="footer-section">
+                        <h3>Aloqa</h3>
+                        <p><i class="fas fa-envelope"></i> info@sportyangiliklari.uz</p>
+                        <p><i class="fas fa-phone"></i> +998 90 123 45 67</p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+        <!-- Scripts -->
+        <script src="js/filters.js"></script>
+    </body>
+</html>
